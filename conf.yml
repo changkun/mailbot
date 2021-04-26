@@ -7,13 +7,13 @@ smtp_host: smtpin1.ifi.lmu.de
 smtp_port: "587"
 avatar: Changkun Ou
 email_addr: changkun.ou
-username: xxx
-password: xxx
-receivers:
+username: xxx # email account username
+password: xxx # email account password
+receivers:    # all receivers
   - changkun.ou
-send_time: "2006-01-02T07:30:00+02:00"
-title: Need to come to the office/lab
-content: |
+send_time: "2006-01-02T07:30:00+02:00" # only change hour and minutes
+title: Need to come to the office/lab  # email title
+content: |                             # email content
   Dear XYZ,
   
   this is an email.
