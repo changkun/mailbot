@@ -24,6 +24,7 @@ type conf struct {
 	Password  string   `yaml:"password"`
 	Receivers []string `yaml:"receivers"`
 	SendTime  string   `yaml:"send_time"`
+	Hours     int      `yaml:"hours"`
 	Title     string   `yaml:"title"`
 	Content   string   `yaml:"content"`
 }
@@ -82,6 +83,9 @@ func main() {
 	if err != nil {
 		panic(err)
 	}
+
+	gap := time.Hour * time.Duration(c.Hours)
+
 	now := time.Now().In(t.Location())
 	sendTime := time.Date(
 		now.Year(),
@@ -92,8 +96,7 @@ func main() {
 		t.Minute(),
 		0, 0, t.Location())
 	if now.Sub(sendTime) > 0 {
-		sendTime = sendTime.Add(time.Hour * 24)
-		// sendTime = sendTime.Add(time.Hour)
+		sendTime = sendTime.Add(gap)
 	}
 
 	for {
@@ -115,6 +118,6 @@ func main() {
 			fmt.Printf("cannot send email: %v\n", err)
 		}
 		fmt.Printf("email was sent at: %v\n", sendTime)
-		sendTime = sendTime.Add(time.Hour)
+		sendTime = sendTime.Add(gap)
 	}
 }
