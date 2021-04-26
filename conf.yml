@@ -12,11 +12,11 @@ password: xxx # email account password
 receivers:    # all receivers
   - changkun.ou
 send_time: "2006-01-02T07:30:00+02:00" # only change hour and minutes
-title: Need to come to the office/lab  # email title
+title: Need to come to the office/lab (%d.%d.%d)  # email title
 content: |                             # email content
   Dear XYZ,
   
-  this is an email.
+  This is an email send at date %d.%d.%d.
   
   Sincerely,
   Changkun Ou

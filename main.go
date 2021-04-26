@@ -99,11 +99,17 @@ func main() {
 	for {
 		fmt.Printf("next email will be send at: %v\n", sendTime)
 		time.Sleep(sendTime.Sub(time.Now().Local()))
-		err := c.sendInbox(c.Title, fmt.Sprintf(
-			c.Content,
-			time.Now().Day(),
-			time.Now().Month(),
-			time.Now().Year()),
+		err := c.sendInbox(
+			fmt.Sprintf(
+				c.Title,
+				time.Now().Day(),
+				time.Now().Month(),
+				time.Now().Year()),
+			fmt.Sprintf(
+				c.Content,
+				time.Now().Day(),
+				time.Now().Month(),
+				time.Now().Year()),
 		)
 		if err != nil {
 			fmt.Printf("cannot send email: %v\n", err)
