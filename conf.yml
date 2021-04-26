@@ -11,9 +11,9 @@ username: xxx # email account username
 password: xxx # email account password
 receivers:    # all receivers
   - changkun.ou
-send_time: "2006-01-02T07:30:00+02:00" # only change hour and minutes
+send_time: "2006-01-02T07:30:00+02:00" # only change hour, minutes, or timezone
 title: Need to come to the office/lab (%d.%d.%d)  # email title
-content: |                             # email content
+content: |                                        # email content
   Dear XYZ,
   
   This is an email send at date %d.%d.%d.

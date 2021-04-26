@@ -82,7 +82,7 @@ func main() {
 	if err != nil {
 		panic(err)
 	}
-	now := time.Now().Local()
+	now := time.Now().In(t.Location())
 	sendTime := time.Date(
 		now.Year(),
 		now.Month(),
@@ -90,7 +90,7 @@ func main() {
 		t.Hour(),
 		// now.Hour(),
 		t.Minute(),
-		0, 0, time.Local)
+		0, 0, t.Location())
 	if now.Sub(sendTime) > 0 {
 		sendTime = sendTime.Add(time.Hour * 24)
 		// sendTime = sendTime.Add(time.Hour)
@@ -98,7 +98,7 @@ func main() {
 
 	for {
 		fmt.Printf("next email will be send at: %v\n", sendTime)
-		time.Sleep(sendTime.Sub(time.Now().Local()))
+		time.Sleep(sendTime.Sub(time.Now().In(t.Location())))
 		err := c.sendInbox(
 			fmt.Sprintf(
 				c.Title,
