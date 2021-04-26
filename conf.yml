@@ -1,0 +1,22 @@
+# Copyright 2021 Changkun Ou. All rights reserved.
+# Use of this source code is governed by a MIT
+# license that can be found in the LICENSE file.
+
+---
+smtp_host: smtpin1.ifi.lmu.de
+smtp_port: "587"
+avatar: Changkun Ou
+email_addr: changkun.ou
+username: xxx
+password: xxx
+receivers:
+  - changkun.ou
+send_time: "2006-01-02T07:30:00+02:00"
+title: Need to come to the office/lab
+content: |
+  Dear XYZ,
+  
+  this is an email.
+  
+  Sincerely,
+  Changkun Ou
