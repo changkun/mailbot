@@ -15,9 +15,34 @@ send_time: "2006-01-02T07:30:00+02:00" # only change hour, minutes, or timezone
 hours: 24                              # how many hours per email?
 title: Need to come to the office/lab (%d.%d.%d)  # email title
 content: |                                        # email content
-  Dear XYZ,
-  
-  This is an email send at date %d.%d.%d.
-  
+  Dear Heinrich, Andreas, Albrecht,
+
+  I work in parts from home, but I cannot perform my work entirely in
+  home-office and I will need to come to the office/lab in Frauenlobstr.
+  for using the GPU server (ou-perf.medien.ifi.lmu.de) with two proper
+  displays to show interactions in real-time, and remote desktop control
+  is not an option. Move the server to home is also not possible because
+  it requires an LMU IP address to serve necessary services.
+
+  Thus, I need access to the infrastructure that I mentioned above today
+  (%d.%d.%d) that is only available in the office. To understand
+  and check whether I am currently in the office or not, you could visit
+  the following website to fetch real-time information:
+
+  https://changkun.de/s/working?
+
   Sincerely,
   Changkun Ou
+
+  --
+  Changkun Ou, M.Sc.
+  Ludwig-Maximilians-Universität München
+  Institute of Computer Science
+  Research Group of Human-Computer Interaction
+  Frauenlobstr. 7a, Room 455
+  D-80337 München
+
+  Status: changkun.de/s/working?
+  Mail1:  changkun.ou at ifi.lmu.de
+  Mail2:  research at changkun.de
+  Web:    changkun.de/s/lmu
